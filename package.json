@@ -1,24 +1,28 @@
 {
-  "name": "turborepo-basic-shared",
-  "version": "0.0.0",
-  "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
-  "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
-  },
-  "devDependencies": {
-    "prettier": "^2.5.1",
-    "turbo": "latest"
-  },
-  "engines": {
-    "npm": ">=7.0.0",
-    "node": ">=14.0.0"
-  },
-  "packageManager": "yarn@1.22.17"
+    "name": "animal-facts",
+    "version": "0.0.0",
+    "private": true,
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
+    "scripts": {
+        "build": "turbo run build",
+        "build:dev": "turbo run build:dev",
+        "build:start": "turbo run build:start --parallel",
+        "start": "turbo run start --parallel",
+        "start:live": "turbo run start:live --parallel"
+    },
+    "devDependencies": {
+        "prettier": "^2.5.1",
+        "turbo": "^1.1.3"
+    },
+    "engines": {
+        "npm": ">=7.0.0",
+        "node": ">=14.0.0"
+    },
+    "packageManager": "yarn@1.22.17",
+    "dependencies": {
+        "global": "^4.4.0"
+    }
 }
