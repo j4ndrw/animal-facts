@@ -20,6 +20,7 @@
         },
         "start:live": {
             "cache": false
-        }
+        },
+        "start:mfe": {}
     }
 }
