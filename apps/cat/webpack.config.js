@@ -4,7 +4,9 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const deps = require("./package.json").dependencies;
 module.exports = {
     output: {
-        publicPath: "http://localhost:3001/",
+        publicPath: process.env.VERCEL_ENV
+            ? process.env.VERCEL_URL
+            : "http://localhost:3001/",
     },
 
     resolve: {
