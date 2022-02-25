@@ -47,15 +47,9 @@ module.exports = {
             name: "host",
             filename: "remoteEntry.js",
             remotes: {
-                "cat-mf": process.env.CAT_REMOTE_URL
-                    ? `cat@${process.env.CAT_REMOTE_URL}/remoteEntry.js`
-                    : "cat@http://localhost:3001/remoteEntry.js",
-                "dog-mf": process.env.DOG_REMOTE_URL
-                    ? `dog@${process.env.DOG_REMOTE_URL}/remoteEntry.js`
-                    : "dog@http://localhost:3002/remoteEntry.js",
-                "squirrel-mf": process.env.SQUIRREL_REMOTE_URL
-                    ? `squirrel@${process.env.SQUIRREL_REMOTE_URL}/remoteEntry.js`
-                    : "squirrel@http://localhost:3003/remoteEntry.js",
+                "cat-mf": "cat@http://localhost:3001/remoteEntry.js",
+                "dog-mf": "dog@http://localhost:3002/remoteEntry.js",
+                "squirrel-mf": "squirrel@http://localhost:3003/remoteEntry.js",
             },
             exposes: {},
             shared: {
