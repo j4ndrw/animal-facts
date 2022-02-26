@@ -3,5 +3,7 @@ import ReactDOM from "react-dom";
 
 import "./index.scss";
 
-const App = () => <></>;
+import Dog from "./Dog";
+
+const App = () => <Dog />;
 ReactDOM.render(<App />, document.getElementById("app"));

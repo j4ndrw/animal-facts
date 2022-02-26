@@ -3,5 +3,7 @@ import ReactDOM from "react-dom";
 
 import "./index.scss";
 
-const App = () => <></>;
+import Squirrel from "./Squirrel";
+
+const App = () => <Squirrel />;
 ReactDOM.render(<App />, document.getElementById("app"));

@@ -3,7 +3,9 @@ import ReactDOM from "react-dom";
 
 import "./index.scss";
 
+import Cat from "./Cat";
+
 const App = () => {
-    return <></>;
+    return <Cat />;
 };
 ReactDOM.render(<App />, document.getElementById("app"));
