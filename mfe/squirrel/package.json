@@ -1,21 +1,22 @@
 {
-    "name": "cat",
+    "name": "squirrel",
     "version": "1.0.0",
     "scripts": {
         "build": "webpack --mode production",
         "build:dev": "webpack --mode development",
-        "build:start": "cd dist && PORT=3001 npx serve",
+        "build:start": "cd dist && PORT=3003 npx serve",
         "start": "webpack serve --open --mode development",
-        "start:live": "webpack serve --open --mode development --live-reload --hot",
-        "start:mfe": "cd dist && PORT=3001 npx serve"
+        "start:live": "webpack serve --open --mode development --live-reload --hot"
     },
     "license": "MIT",
     "devDependencies": {
         "@babel/core": "^7.15.8",
+        "@babel/plugin-proposal-class-properties": "^7.16.7",
         "@babel/plugin-transform-runtime": "^7.15.8",
         "@babel/preset-env": "^7.15.8",
-        "@babel/preset-react": "^7.14.5",
+        "@babel/preset-react": "^7.16.7",
         "@babel/preset-typescript": "^7.10.4",
+        "@types/node": "^17.0.12",
         "@types/react": "^17.0.2",
         "@types/react-dom": "^17.0.2",
         "autoprefixer": "^10.1.0",
@@ -25,16 +26,17 @@
         "postcss": "^8.2.1",
         "postcss-loader": "^4.1.0",
         "style-loader": "^3.3.0",
+        "tailwindcss": "^2.0.2",
+        "tsconfig": "*",
         "typescript": "^4.5.2",
         "webpack": "^5.57.1",
         "webpack-cli": "^4.9.0",
-        "webpack-dev-server": "^4.3.1",
-        "tailwindcss": "^2.0.2"
+        "webpack-dev-server": "^4.3.1"
     },
     "dependencies": {
+        "packages": "*",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
-        "packages": "*",
         "ui": "*"
     }
 }

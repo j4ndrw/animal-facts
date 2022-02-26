@@ -2,12 +2,11 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 
 const deps = require("./package.json").dependencies;
-
 module.exports = {
     output: {
         publicPath: process.env.VERCEL_ENV
             ? process.env.VERCEL_URL
-            : "http://localhost:3000/",
+            : "http://localhost:3002/",
     },
 
     resolve: {
@@ -15,7 +14,7 @@ module.exports = {
     },
 
     devServer: {
-        port: 3000,
+        port: 3002,
         historyApiFallback: true,
     },
 
@@ -37,6 +36,17 @@ module.exports = {
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
+                    options: {
+                        presets: [
+                            "@babel/preset-env",
+                            "@babel/react",
+                            {
+                                plugins: [
+                                    "@babel/plugin-proposal-class-properties",
+                                ],
+                            },
+                        ],
+                    },
                 },
             },
         ],
@@ -44,14 +54,12 @@ module.exports = {
 
     plugins: [
         new ModuleFederationPlugin({
-            name: "host",
+            name: "dog",
             filename: "remoteEntry.js",
-            remotes: {
-                "cat-mf": "cat@http://localhost:3001/remoteEntry.js",
-                "dog-mf": "dog@http://localhost:3002/remoteEntry.js",
-                "squirrel-mf": "squirrel@http://localhost:3003/remoteEntry.js",
+            remotes: {},
+            exposes: {
+                "./Dog": "./src/Dog",
             },
-            exposes: {},
             shared: {
                 ...deps,
                 react: {

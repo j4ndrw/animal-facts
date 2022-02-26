@@ -6,7 +6,7 @@ module.exports = {
     output: {
         publicPath: process.env.VERCEL_ENV
             ? process.env.VERCEL_URL
-            : "http://localhost:3002/",
+            : "http://localhost:3001/",
     },
 
     resolve: {
@@ -14,7 +14,7 @@ module.exports = {
     },
 
     devServer: {
-        port: 3002,
+        port: 3001,
         historyApiFallback: true,
     },
 
@@ -36,6 +36,17 @@ module.exports = {
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
+                    options: {
+                        presets: [
+                            "@babel/preset-env",
+                            "@babel/react",
+                            {
+                                plugins: [
+                                    "@babel/plugin-proposal-class-properties",
+                                ],
+                            },
+                        ],
+                    },
                 },
             },
         ],
@@ -43,11 +54,11 @@ module.exports = {
 
     plugins: [
         new ModuleFederationPlugin({
-            name: "dog",
+            name: "cat",
             filename: "remoteEntry.js",
             remotes: {},
             exposes: {
-                "./Dog": "./src/Dog",
+                "./Cat": "./src/Cat",
             },
             shared: {
                 ...deps,
