@@ -1,6 +1,7 @@
 # Reflective log
 
-An attempt at implementing a MFE (micro front-ends) architected project with Turborepo as the monorepo manager.
+An attempt at implementing a MFE (micro front-ends) architected project with Turborepo as the monorepo manager and
+React as the FE library.
 
 So far, the setup has been super painful.
 
