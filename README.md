@@ -1,7 +1,10 @@
 # Reflective log
 
-An attempt at implementing a MFE (micro front-ends) architected project with Turborepo as the monorepo manager and
-React as the FE library.
+## An attempt at implementing a MFE (micro front-ends) architected project with Turborepo as the monorepo manager,
+
+React as the FE library and Webpack5's module federation feature.
+
+(Disclaimer - everything I will be saying below will be strictly related to the MFEs + Module Federation + React combination)
 
 So far, the setup has been super painful.
 
