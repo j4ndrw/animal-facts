@@ -18,7 +18,8 @@ rather than `https://<url>/remoteEntry.js`, which is odd. Perhaps I did somethin
 
 Regardless, I did learn quite a lot from this. In my opinion, federated modules are still a bit far in terms of projection use in
 a big project. Maybe for experimental projects / toy projects it may work, but I don't see how this can scale in a big project
-without appropiate tooling for managing MFEs. Again, this is my opinion at the time of writing, and I may be massively wrong.
+without appropiate tooling for managing MFEs (at least in the Turborepo + React ecosystem).
+Again, this is my opinion at the time of writing, and I may be massively wrong.
 I still have a lot to learn about this subject.
 
 Nevertheless, I am quite excited. I really enjoy working with microservices and I am eager to see how federated modules will help
