@@ -1,77 +1,24 @@
-# Turborepo starter
+# Reflective log
 
-This is an official Yarn v1 starter turborepo.
+An attempt at implementing a MFE (micro front-ends) architected project with Turborepo as the monorepo manager.
 
-## What's inside?
+So far, the setup has been super painful.
 
-This turborepo uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package manager. It includes the following packages/apps:
+MFEs sound like they could provide an incredible boost in productivity, and I am sure they are for mature projects,
+but it almost seems like the set up is not worth it. Or maybe that was just my experience, because I wanted to have
+a monorepo, rather than multiple repos per MFE.
 
-### Apps and Packages
+At some point, maybe, I'll try to build some sort of tool that helps in creating a MFE + monorepo project.
+Such a tool should also be able to generate individual MFEs (kinda like Angular's `ng generate` does).
 
-- `docs`: a [Next.js](https://nextjs.org) app
-- `web`: another [Next.js](https://nextjs.org) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+After some time setting up the monorepo and the MFEs, I managed to make them work locally, but when trying to
+deploy to Vercel, it broke. For some reason, Vercel tries to get the remote entry point from `https://<url>/<url>/remoteEntry.js`,
+rather than `https://<url>/remoteEntry.js`, which is odd. Perhaps I did something wrong, I'm not sure.
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+Regardless, I did learn quite a lot from this. In my opinion, federated modules are still a bit far in terms of projection use in
+a big project. Maybe for experimental projects / toy projects it may work, but I don't see how this can scale in a big project
+without appropiate tooling for managing MFEs. Again, this is my opinion at the time of writing, and I may be massively wrong.
+I still have a lot to learn about this subject.
 
-### Utilities
-
-This turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-## Setup
-
-This repository is used in the `npx create-turbo` command, and selected when choosing which package manager you wish to use with your monorepo (Yarn).
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-yarn run build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-yarn run dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching (Beta)](https://turborepo.org/docs/features/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching (Beta) you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Pipelines](https://turborepo.org/docs/features/pipelines)
-- [Caching](https://turborepo.org/docs/features/caching)
-- [Remote Caching (Beta)](https://turborepo.org/docs/features/remote-caching)
-- [Scoped Tasks](https://turborepo.org/docs/features/scopes)
-- [Configuration Options](https://turborepo.org/docs/reference/configuration)
-- [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)
+Nevertheless, I am quite excited. I really enjoy working with microservices and I am eager to see how federated modules will help
+projects scale with a micro front-end architecture.
