@@ -3,6 +3,16 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 
 const deps = require("./package.json").dependencies;
 
+const remotes = {
+    "cat-mf":
+        process.env.CAT_REMOTE || "cat@http://localhost:3001/remoteEntry.js",
+    "dog-mf":
+        process.env.DOG_REMOTE || "dog@http://localhost:3002/remoteEntry.js",
+    "squirrel-mf":
+        process.env.SQUIRREL_REMOTE ||
+        "squirrel@http://localhost:3003/remoteEntry.js",
+};
+
 module.exports = {
     output: {
         publicPath: process.env.VERCEL_ENV
@@ -57,11 +67,7 @@ module.exports = {
         new ModuleFederationPlugin({
             name: "host",
             filename: "remoteEntry.js",
-            remotes: {
-                "cat-mf": "cat@http://localhost:3001/remoteEntry.js",
-                "dog-mf": "dog@http://localhost:3002/remoteEntry.js",
-                "squirrel-mf": "squirrel@http://localhost:3003/remoteEntry.js",
-            },
+            remotes,
             exposes: {},
             shared: {
                 ...deps,
