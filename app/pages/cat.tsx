@@ -1,7 +1,7 @@
 import MFE from "../components/arch/MFE";
 import Layout from "../components/Layout";
 
-const catHost = process.env.VERCEL_ENV
+const catHost = !process.env.LOCAL
     ? "https://af-cat-mfe.vercel.app"
     : "http://localhost:3001";
 

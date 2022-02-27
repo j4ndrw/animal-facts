@@ -11,6 +11,7 @@
         },
 
         "mfe:dev": {},
+        "mfe:preview": {},
         "main:dev": {},
         "main:start": {}
     }

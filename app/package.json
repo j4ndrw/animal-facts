@@ -3,7 +3,7 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
-        "main:dev": "next",
+        "main:dev": "LOCAL=true next",
         "main:build": "next build",
         "main:start": "next start",
         "main:type-check": "tsc"
