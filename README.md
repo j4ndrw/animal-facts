@@ -23,3 +23,36 @@ I still have a lot to learn about this subject.
 
 Nevertheless, I am quite excited. I really enjoy working with microservices and I am eager to see how (and if) federated modules will help
 projects scale with a micro front-end architecture.
+
+### Update 2
+
+I tried a different approach this time. Instead of federating modules via Webpack5, I'm downloading
+them via their manifest.json build. This is more limited than federating modules with Webpack, because I
+had to load the render functions in the window object and loading it in the container app upon download.
+
+Still, I think this is still a viable way of implementing MFE, as, the main goal is decoupling the app
+into multiple apps, and this approach does the job.
+
+The container is a Next app, while the MFEs are Vite + React apps.
+
+I also got rid of the custom UI library, since I think that the usual way of using those is by
+publishing them as separate packages (which, in hindsight, makes sense).
+
+I think I'll use this project as a starter for future projects.
+
+This approach was much easier than the module federation one with Webpack, but it was still difficult
+to set up.
+
+For now though, I think that, whenever I want to use MFEs, I'll probably use the configuration I used here:
+
+-   Container app = Next.js (or Nuxt.js, or even CRA)
+-   MFE apps = Vite or CRA (Might work well with Next too, but I have a hunch that it might be difficult due to features like SSR - I think MFEs work best with static components).
+
+The other pitfall, which is not that big of a deal, but it still sucks, is that, due to using
+a monorepo, Vercel triggers a deployment on every app, regardless of branch. This makes me think
+(and this is strictly related to Vercel) that a multirepo would work better than a monorepo.
+This would probably be different if I used something else to host the apps (maybe Firebase, GCP, AWS?).
+
+Regardless - I'm glad this works.
+
+The only thing left to do is to implement the actual thing - <b>Facts about cats and dogs!!!</b>
