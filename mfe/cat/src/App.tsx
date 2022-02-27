@@ -1,11 +1,19 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import { Button } from "ui/Button";
 
-import "./index.scss";
+import { BrowserHistory, createBrowserHistory } from "history";
+interface Props {
+    history?: BrowserHistory;
+}
 
-import Cat from "./Cat";
+const defaultHistory = createBrowserHistory();
 
-const App = () => {
-    return <Cat />;
-};
-ReactDOM.render(<App />, document.getElementById("app"));
+function App({ history = defaultHistory }: Props) {
+    return (
+        <div>
+            Cat
+            <Button />
+        </div>
+    );
+}
+
+export default App;

@@ -1,25 +1,10 @@
 {
     "pipeline": {
-        "build": {
-            "dependsOn": ["^build"],
+        "mfe:build": {
+            "dependsOn": ["^mfe:build"],
             "outputs": ["dist/**"]
         },
 
-        "build:dev": {
-            "dependsOn": ["^build:dev"],
-            "outputs": ["dist/**"]
-        },
-
-        "build:start": {
-            "dependsOn": ["^build:start"],
-            "outputs": ["dist/**"]
-        },
-
-        "start": {
-            "cache": false
-        },
-        "start:live": {
-            "cache": false
-        }
+        "mfe:dev": {}
     }
 }

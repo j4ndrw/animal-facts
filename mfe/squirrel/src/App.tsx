@@ -1,9 +1,19 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import { Button } from "ui/Button";
 
-import "./index.scss";
+import { BrowserHistory, createBrowserHistory } from "history";
+interface Props {
+    history?: BrowserHistory;
+}
 
-import Squirrel from "./Squirrel";
+const defaultHistory = createBrowserHistory();
 
-const App = () => <Squirrel />;
-ReactDOM.render(<App />, document.getElementById("app"));
+function App({ history = defaultHistory }: Props) {
+    return (
+        <div>
+            Squirrel
+            <Button />
+        </div>
+    );
+}
+
+export default App;

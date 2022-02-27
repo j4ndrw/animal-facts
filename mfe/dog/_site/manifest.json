@@ -1,0 +1,16 @@
+{
+  "src/main.tsx": {
+    "file": "assets-vite/main.74f157fe.js",
+    "src": "src/main.tsx",
+    "isEntry": true,
+    "imports": [
+      "_vendor.1bc25611.js"
+    ],
+    "css": [
+      "assets-vite/main.328145a3.css"
+    ]
+  },
+  "_vendor.1bc25611.js": {
+    "file": "assets-vite/vendor.1bc25611.js"
+  }
+}

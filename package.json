@@ -7,12 +7,8 @@
         "packages/*"
     ],
     "scripts": {
-        "build": "turbo run build",
-        "build:dev": "turbo run build:dev",
-        "build:start": "turbo run build:start --parallel",
-        "start": "turbo run start --parallel",
-        "start:live": "turbo run start:live --parallel",
-        "start:mfe": "turbo run start:mfe --parallel"
+        "mfe:dev": "turbo run mfe:dev --parallel",
+        "mfe:build": "turbo run mfe:build --parallel"
     },
     "devDependencies": {
         "prettier": "^2.5.1",
