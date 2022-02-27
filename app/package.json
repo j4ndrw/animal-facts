@@ -1,0 +1,25 @@
+{
+    "name": "app",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "main:dev": "next",
+        "main:build": "next build",
+        "main:start": "next start",
+        "main:type-check": "tsc"
+    },
+    "dependencies": {
+        "history": "^5.3.0",
+        "next": "latest",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    },
+    "devDependencies": {
+        "@types/node": "^12.12.21",
+        "@types/react": "^17.0.2",
+        "@types/react-dom": "^17.0.1",
+        "postcss-preset-env": "^7.4.1",
+        "tailwindcss": "^3.0.23",
+        "typescript": "4.3.2"
+    }
+}

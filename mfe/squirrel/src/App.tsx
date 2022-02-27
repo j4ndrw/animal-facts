@@ -1,4 +1,4 @@
-import { Button } from "ui/Button";
+import { Button } from "@mantine/core";
 
 import { BrowserHistory, createBrowserHistory } from "history";
 interface Props {
@@ -11,7 +11,7 @@ function App({ history = defaultHistory }: Props) {
     return (
         <div>
             Squirrel
-            <Button />
+            <Button>boop</Button>
         </div>
     );
 }

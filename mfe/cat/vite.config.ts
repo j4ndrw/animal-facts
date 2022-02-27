@@ -5,8 +5,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
     plugins: [react()],
     build: {
-        outDir: "_site",
-        assetsDir: "assets", // default = "assets"
+        assetsDir: "assets",
         manifest: true,
         rollupOptions: {
             input: "/src/main.tsx",

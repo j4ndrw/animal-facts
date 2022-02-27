@@ -4,9 +4,13 @@
     "private": true,
     "workspaces": [
         "mfe/*",
-        "packages/*"
+        "app"
     ],
     "scripts": {
+        "main:dev": "turbo run main:dev --parallel",
+        "main:build": "turbo run main:build --parallel",
+        "main:start": "turbo run main:start --parallel",
+        "main:type-check": "turbo run main:type-check --parallel",
         "mfe:dev": "turbo run mfe:dev --parallel",
         "mfe:build": "turbo run mfe:build --parallel"
     },

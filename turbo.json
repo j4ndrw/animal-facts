@@ -5,6 +5,13 @@
             "outputs": ["dist/**"]
         },
 
-        "mfe:dev": {}
+        "main:build": {
+            "dependsOn": ["^main:build"],
+            "outputs": ["build/**"]
+        },
+
+        "mfe:dev": {},
+        "main:dev": {},
+        "main:start": {}
     }
 }
