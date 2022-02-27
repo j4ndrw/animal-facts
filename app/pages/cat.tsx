@@ -1,7 +1,9 @@
 import MFE from "../components/arch/MFE";
 import Layout from "../components/Layout";
 
-const catHost = process.env.CAT_HOST || "http://localhost:3001";
+const catHost = process.env.VERCEL_ENV
+    ? "https://af-cat-mfe.vercel.app"
+    : "http://localhost:3001";
 
 const IndexPage = () => (
     <div>

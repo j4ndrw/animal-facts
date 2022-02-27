@@ -1,7 +1,9 @@
 import MFE from "../components/arch/MFE";
 import Layout from "../components/Layout";
 
-const dogHost = process.env.DOG_HOST || "http://localhost:3002";
+const dogHost = process.env.VERCEL_ENV
+    ? "https://af-dog-mfe.vercel.app"
+    : "http://localhost:3002";
 
 const IndexPage = () => (
     <div>
