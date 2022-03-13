@@ -1,12 +1,12 @@
 {
-  "name": "dog",
-  "version": "1.0.0",
-  "main": "index.ts",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/jackrabbit": "^4.3.3"
-  },
-  "dependencies": {
-    "jackrabbit": "^4.4.0"
-  }
+    "name": "dog",
+    "version": "1.0.0",
+    "main": "index.ts",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/jackrabbit": "^4.3.3"
+    },
+    "dependencies": {
+        "jackrabbit": "^4.4.0"
+    }
 }
