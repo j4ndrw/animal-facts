@@ -6,11 +6,8 @@ import App from "./App";
 import { BrowserHistory } from "history";
 
 // @ts-ignore
-window.renderCat = (containerId: string, history: BrowserHistory) => {
-    ReactDOM.render(
-        <App history={history} />,
-        document.getElementById(containerId)
-    );
+window.renderCat = (containerId: string, data: unknown) => {
+    ReactDOM.render(<App data={data} />, document.getElementById(containerId));
 };
 
 // @ts-ignore
@@ -20,5 +17,8 @@ window.unmountHeader = (containerId: string) => {
 };
 
 if (!document.getElementById("mfe-Cat")) {
-    ReactDOM.render(<App />, document.getElementById("root"));
+    ReactDOM.render(
+        <App data={null} standalone />,
+        document.getElementById("root")
+    );
 }

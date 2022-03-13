@@ -3,18 +3,26 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
-        "main:dev": "LOCAL=true next",
-        "main:build": "next build",
-        "main:start": "next start",
-        "main:type-check": "tsc"
+        "client:dev": "LOCAL=true next",
+        "client:build": "next build",
+        "client:start": "next start",
+        "client:type-check": "tsc"
     },
     "dependencies": {
+        "@trpc/client": "^9.20.1",
+        "@trpc/next": "^9.20.1",
+        "@trpc/react": "^9.20.1",
+        "@trpc/server": "^9.20.1",
         "history": "^5.3.0",
+        "jackrabbit": "^4.4.0",
         "next": "latest",
         "react": "^17.0.2",
-        "react-dom": "^17.0.2"
+        "react-dom": "^17.0.2",
+        "react-query": "^3.34.16",
+        "zod": "^3.13.4"
     },
     "devDependencies": {
+        "@types/jackrabbit": "^4.3.3",
         "@types/node": "^12.12.21",
         "@types/react": "^17.0.2",
         "@types/react-dom": "^17.0.1",

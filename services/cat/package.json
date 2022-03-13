@@ -1,0 +1,13 @@
+{
+  "name": "cat",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "author": "Andrei-Alin Murjan",
+  "license": "MIT",
+  "dependencies": {
+    "jackrabbit": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/jackrabbit": "^4.3.3"
+  }
+}

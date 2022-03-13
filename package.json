@@ -7,10 +7,10 @@
         "app"
     ],
     "scripts": {
-        "main:dev": "turbo run main:dev --parallel",
-        "main:build": "turbo run main:build --parallel",
-        "main:start": "turbo run main:start --parallel",
-        "main:type-check": "turbo run main:type-check --parallel",
+        "client:dev": "turbo run client:dev --parallel",
+        "client:build": "turbo run client:build --parallel",
+        "client:start": "turbo run client:start --parallel",
+        "client:type-check": "turbo run client:type-check --parallel",
         "mfe:dev": "turbo run mfe:dev --parallel",
         "mfe:build": "turbo run mfe:build --parallel",
         "mfe:preview": "turbo run mfe:preview --parallel"

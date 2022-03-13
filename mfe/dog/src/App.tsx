@@ -1,13 +1,11 @@
 import { Button } from "@mantine/core";
 
-import { BrowserHistory, createBrowserHistory } from "history";
-interface Props {
-    history?: BrowserHistory;
+interface Props<DataType = unknown> {
+    data: unknown;
+    standalone?: boolean;
 }
 
-const defaultHistory = createBrowserHistory();
-
-function App({ history = defaultHistory }: Props) {
+function App({ data, standalone = false }: Props) {
     return (
         <div>
             Dog
